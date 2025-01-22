@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Банк НЭФ</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -39,9 +41,16 @@
         <section class="offers">
             <h2 class="offers__title">Ваши персональные предложения готовы</h2>
             <p class="offers__description">Введите номер и узнайте, что мы подготовили для вас. Звонить не будем - покажем всё онлайн</p>
-            Использовать форму из 2.3
-            <p class="offers__agreement">Я даю свое согласие на обработку и использование моих персональных данных. Этот сайт защищен Google
-                reCAPTCHA Конфиденциальность и Условия использования</p>
+            <form class="form" action="/">
+                <h1 class="form__title">Введите номер телефона</h1>
+                <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required>
+                <button  class="form__button">ОК</button>
+            </form>
+            <p class="offers__agreement"> 
+                <input id="html" type="checkbox">
+                <label for="html">Я даю свое согласие на обработку и использование моих персональных данных. Этот сайт защищен Google
+                    reCAPTCHA Конфиденциальность и Условия использования</label>
+                <form>
         </section>
         <section class="credit-card">
             <h2 class="credit-card__description">Кредитная карта 100 дней без % на всё</h2>
