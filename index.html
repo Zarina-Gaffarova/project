@@ -1,34 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Банк НЭФ</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <header>Шапка сайта
-        <img src="images/logo.jpg" alt="" width="100">
-        <h1>Новая эра финансов</h1>
-    <nav>
-        <ul>
-            <li> <a href="#">Персональные предложения</a> </li>
-            <li> <a href="#">Кредитный калькулятор</a> </li>
-            <li> <a href="#">Оформление карт</a> </li>
-            <li> <a href="#">Курс валют</a> </li>
-        </ul>
-    </nav>
-    <a href="#">Вход</a>
-    <a href="#">Регистрация</a>
+    <header class="header">
+        <img class="header__img" src="images/logo1.png" alt="" width="100">
+        <h1 class="header__bank-name">Новая эра финансов</h1>
+        <nav class="header__menu">
+            <ul>
+                <li> <a class="header_credits"  href="credits.html">Кредиты</a> </li>
+
+                <li> <a class="header_insurance" href="insurance.html">Страхование</a> </li>
+                <li> <a class="header_mortgage" href="mortgage.html">Ипотека</a> </li>
+            </ul>
+        </nav>
+        <a href="#">Вход</a>
+        <a href="#">Регистрация</a>
     </header>
-    <main>
-        <div>
-            <h2>Информация о банке</h2>
-            <img src="images/logo.jpg" alt="" width="200">
-            <p>НЭФ - Новая Эра Финансов. Мы даём людям уверенность и надёжность, делаем их жизнь лучше, помогая реализовывать устремления и мечты.</p> 
-        </div>
+    <main class="home-page">
+        <section class="info">
+            <h2 class="info__bank">Информация о банке</h2>
+            <img class="info__img" src="images/logo1.png" alt="" width="200">
+            <p class="info__slogan">НЭФ - Новая Эра Финансов. Мы даём людям уверенность и надёжность, делаем их жизнь
+                лучше, помогая
+                реализовывать стремления и мечты.</p>
+        </section>
+        <section class="offers">
+            <h2 class="offers__title">Ваши персональные предложения готовы</h2>
+            <p class="offers__description">Введите номер и узнайте, что мы подготовили для вас. Звонить не будем -
+                покажем всё онлайн</p>
+            <form class="form" action="/">
+                <h1 class="form__title">Введите номер телефона</h1>
+                <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required>
+                <button class="form__button">ОК</button>
+            </form>
+            <p class="offers__agreement">
+                <input id="html" type="checkbox">
+                <label for="html">Я даю свое согласие на обработку и использование моих персональных данных. Этот сайт
+                    защищен Google
+                    reCAPTCHA Конфиденциальность и Условия использования</label>
+            <form>
+        </section>
+        <section class="credit-card">
+            <h2 class="credit-card__description">Кредитная карта 100 дней без % на всё</h2>
+            <img class="credit-card__image" src="images/Untitled (1).png" alt="" width="250">
+            <p class="credit-card__offer">0 ₽ за снятие наличных</p>
+        </section>
+        <section class="cashback">
+            <h2 class="cashback__title">Кэшбэк</h2>
+            <img class="cashback__img" src="images/cashback.png" alt="" width="300">
+            <p class="cashback__products">Оплата продуктов - 5%</p>
+            <p class="cashback__entertainment">Оплата развлечений - 7%</p>
+            <p class="cashback__travel">Оплата путешествий- 2%</p>
+            <p class="cashback__children">Оплата детских товаров - 6%</p>
+        </section>
     </main>
-    <footer>
-        <p>Гаффарова Зарина, Юадарова Дария, Поздеева Устинья, группа ЭК-21</p>
+    <footer class="footer">
+        <p class="footer__developers">Гаффарова Зарина, Юадарова Дария, Поздеева Устинья, группа ЭК-21</p>
     </footer>
+
+    <section class="header__login-form" style="display: none;">
+        <form class="form" action="/">
+            <h1 class="form__title">Вход в личный кабинет</h1>
+            <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required>
+            <input class="form__input" type="password" name="password" placeholder="Пароль" required>
+            <button  class="form__button">Войти</button>
+        </form>
+    </section>
 </body>
+
 </html>
