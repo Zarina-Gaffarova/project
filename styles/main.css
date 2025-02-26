@@ -66,14 +66,17 @@
        .credit{
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
        }
        .insurance{
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
        }
        .mortgage{
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
        }
 
        
