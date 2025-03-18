@@ -10,69 +10,102 @@
 </head>
 
 <body>
-    <header class="header container">
-        <img class="header__img" src="images/logo.png" alt="100" width="200">
-        <h1 class="header__bank-name">Новая эра финансов</h1>
-        <nav class="header__menu">
-            <ul class="menu">
-                <li> <a class="menu__link"  href="credits.html">Кредиты</a> </li>
-                <li> <a class="menu__link" href="insurance.html">Страхование</a> </li>
-                <li> <a class="menu__link" href="mortgage.html">Ипотека</a> </li>
-            </ul>
-        </nav>
-        <a class="menu__link" href="#">Вход</a>
-        <a class="menu__link" href="#">Регистрация</a>
-     
-    </header>
-    <main class="home-page container">
-        <section class="info">
-            <h2 class="info__bank">Информация о банке</h2>
-            <img class="info__img" src="images/logo.png" alt="" width="200">
-            <p class="info__slogan">НЭФ - Новая Эра Финансов. Мы даём людям уверенность и надёжность, делаем их жизнь лучше, помогая реализовывать стремления и мечты.</p>
-        </section>
-        <section class="offers">
-            <h2 class="offers__title">Ваши персональные предложения готовы</h2>
-            <p class="offers__description">Введите номер и узнайте, что мы подготовили для вас. Звонить не будем -
-                покажем всё онлайн</p>
-            <form class="form" action="/">
-                <h1 class="form__title">Введите номер телефона</h1>
-                <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required>
-                <button class="form__button">ОК</button>
+    <!-- Шапка -->
+<header class="header container">
+    <img class="header__logo" src="images/logo.png" alt="Логотип банка НЭФ" width="150">
+    <h1 class="header__bank-name">Новая эра финансов</h1>
+    <nav class="header__nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="credits.html">Кредиты</a></li>
+            <li class="nav__item"><a class="nav__link" href="insurance.html">Страхование</a></li>
+            <li class="nav__item"><a class="nav__link" href="mortgage.html">Ипотека</a></li>
+            <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+        </ul>
+    </nav>
+    <div class="header__auth">
+        <a class="auth__link auth__link--primary"  id="button-login" href="#">Вход</a>
+        <a class="auth__link auth__link--primary"  id="button-reg" href="#">Регистрация</a>  
+    </div>
+</header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero__content container">
+            <h1 class="hero__title">Новая эра финансов</h1>
+            <p class="hero__description">Мы даём людям уверенность и надёжность, делаем их жизнь лучше, помогая реализовывать стремления и мечты.</p>
+            <form class="hero__form">
+                <input class="form__input" type="tel" name="phone" placeholder="Введите номер телефона" required>
+                <button class="form__button" type="submit">Узнать предложения</button>
             </form>
-            <p class="offers__agreement">
-                <input id="html" type="checkbox">
-                <label for="html">Я даю свое согласие на обработку и использование моих персональных данных. Этот сайт
-                    защищен Google
-                    reCAPTCHA Конфиденциальность и Условия использования</label>
-            <form>
-        </section>
-        <section class="credit-card">
-            <h2 class="credit-card__description">Кредитная карта 100 дней без % на всё</h2>
-            <img class="credit-card__image" src="images/Untitled (1).png" alt="" width="250">
-            <p class="credit-card__offer">0 ₽ за снятие наличных</p>
-        </section>
-        <section class="cashback">
-            <h2 class="cashback__title">Кэшбэк</h2>
-            <img class="cashback__img" src="images/cashback.png" alt="" width="300">
-            <p class="cashback__products">Оплата продуктов - 5%</p>
-            <p class="cashback__entertainment">Оплата развлечений - 7%</p>
-            <p class="cashback__travel">Оплата путешествий- 2%</p>
-            <p class="cashback__children">Оплата детских товаров - 6%</p>
-        <button>Обновить кэшбэк</button>
-        </section>
-    </main>
-    <footer class="footer container">
-        <p class="footer__developers">Гаффарова Зарина, Юадарова Дария, Поздеева Устинья, группа ЭК-21</p>
+            <p class="hero__agreement">
+                <input id="agreement" type="checkbox">
+                <label for="agreement">Я даю согласие на обработку персональных данных</label>
+            </p>
+        </div>
+    </section>
+
+    <!-- Ключевые предложения -->
+    <section class="offers container">
+        <h2 class="offers__title">Наши предложения</h2>
+        <div class="offers__grid">
+            <div class="offer__card">
+                <img class="offer__image" src="images/Untitled (1).png" alt="Кредитная карта" width="100">
+                <h3 class="offer__name">Кредитная карта</h3>
+                <p class="offer__description">100 дней без % на всё</p>
+                <button class="offer__button">Подробнее</button>
+            </div>
+            <div class="offer__card">
+                <img class="offer__image" src="images/cashback.png" alt="Кэшбэк" width="100">
+                <h3 class="offer__name">Кэшбэк</h3>
+                <p class="offer__description">До 10% за покупки</p>
+                <button class="offer__button">Подробнее</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer__content container">
+            <p class="footer__text">© 2025 Банк НЭФ. Все права защищены.</p>
+            <ul class="footer__links">
+                <li><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+                <li><a class="footer__link" href="#">Оферта</a></li>
+            </ul>
+        </div>
     </footer>
 
-    <section class="header__login-form" style="display: none;">
-        <form class="form" action="/">
-            <h1 class="form__title">Вход в личный кабинет</h1>
-            <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required>
-            <input class="form__input" type="password" name="password" placeholder="Пароль" required>
-            <button  class="form__button">Войти</button>
-        </form>
-    </section>
+   <!-- Форма входа -->
+    <section class="login-form" id="form-login" hidden>
+    <form class="form">
+        <h2 class="form__title">Вход в личный кабинет</h2>
+        <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
+        <input class="form__input" type="password" name="password" placeholder="Пароль" required autocomplete="current-password">
+        <button class="form__button" type="submit">Войти</button>
+        <button type="button" id="closeLoginForm">Закрыть</button>
+    </form>
+</section>
+
+<!-- Форма регистрации -->
+<section class="login-form" id="form-registration" hidden>
+    <h2 class="form__title registration">Регистрация</h2>
+    <form class="form" id="registrationForm" action="/register" method="POST">
+        <input class="form__input" type="text" name="name" placeholder="Имя" required autocomplete="name">
+        <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
+        <fieldset class="form__fieldset">
+            <div class="form__field-block">
+                <input class="form__input" type="password" name="password" placeholder="Пароль" required autocomplete="new-password">
+                <span class="form__field-alert">Минимум 8 символов</span>
+            </div>
+            <input class="form__input" type="password" name="repeat-password" placeholder="Повторите пароль" required autocomplete="new-password">
+        </fieldset>
+        <fieldset class="form__buttons">
+            <button class="button button--accent" type="submit">Зарегистрироваться</button>
+            <button class="button" type="button" id="cancelRegistration">Отмена</button>
+        </fieldset>
+        <button class="button button--link" type="button">У меня уже есть аккаунт</button>
+    </form>
+</section>
+<!--/ Форма "Регистрация" -->
     <script src="scripts/script.js"></script>
 </body>
 
