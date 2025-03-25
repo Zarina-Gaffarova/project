@@ -21,8 +21,8 @@
         </ul>
     </nav>
     <div class="header__auth">
-        <a class="auth__link auth__link--primary" href="#">Вход</a>
-        <a class="auth__link auth__link--primary" href="#">Регистрация</a>
+        <a class="auth__link auth__link--primary"  id="button-login" href="#">Вход</a>
+        <a class="auth__link auth__link--primary"  id="button-reg" href="#">Регистрация</a>  
     </div>
 </header>
 
@@ -31,39 +31,44 @@
         <h2 class="offers__title">Наши ипотечные предложения</h2>
         <div class="offers__grid">
             <!-- Ипотека для IT -->
-            <section class="offer__card">
-                <img class="offer__image" src="images/x1_Product-banner-_-IT-_-1424x984.png" alt="Ипотека для IT" width="150">
+            <section class="offer__card card-js">
+                <img class="offer__image image-js" src="images/x1_Product-banner-_-IT-_-1424x984.png" alt="Ипотека для IT" width="150">
                 <h3 class="offer__name">Ипотека для IT</h3>
-                <p class="offer__description">Ставка - от 6%</p>
-                <p class="offer__description">Срок - до 30 лет</p>
-                <p class="offer__description">Взнос - от 20%</p>
+                <div class="offer__description description-js" hidden>
+                <p>Ставка - от 6%</p>
+                <p>Срок - до 30 лет</p>
+                <p>Взнос - от 20%</p>
+            </div>
                 <button class="offer__button">Подробнее</button>
             </section>
 
             <!-- Семейная ипотека -->
-            <section class="offer__card">
-                <img class="offer__image" src="images/x1_Product-banner-_-Semei_naya-_-1424x984.png" alt="Семейная ипотека" width="150">
+            <section class="offer__card card-js">
+                <img class="offer__image image-js" src="images/x1_Product-banner-_-Semei_naya-_-1424x984.png" alt="Семейная ипотека" width="150">
                 <h3 class="offer__name">Семейная ипотека</h3>
-                <p class="offer__description">Ставка - от 5,3%</p>
-                <p class="offer__description">Срок - от 3 до 30 лет</p>
-                <p class="offer__description">Взнос - от 20%</p>
+                <div class="offer__description description-js" hidden>
+                <p>Ставка - от 5,3%</p>
+                <p>Срок - от 3 до 30 лет</p>
+                <p>Взнос - от 20%</p>
+            </div>
                 <button class="offer__button">Подробнее</button>
             </section>
 
             <!-- Ипотека для военнослужащих -->
-            <section class="offer__card">
-                <img class="offer__image" src="images/soldier.png" alt="Ипотека для военнослужащих" width="130">
+            <section class="offer__card  card-js">
+                <img class="offer__image image-js" src="images/soldier.png" alt="Ипотека для военнослужащих" width="130">
                 <h3 class="offer__name">Ипотека для военнослужащих</h3>
-                <p class="offer__description">Ставка - от 6,75%</p>
-                <p class="offer__description">Срок - до 25 лет</p>
-                <p class="offer__description">Взнос - от 15%</p>
+                <div class="offer__description description-js" hidden>
+                <p >Ставка - от 6,75%</p>
+                <p >Срок - до 25 лет</p>
+                <p >Взнос - от 15%</p>
+            </div>
                 <button class="offer__button">Подробнее</button>
             </section>
         </div>
-    </main>
-
+   
     <!-- Футер -->
-    <footer class="footer">
+    <footer class="footer container">
         <div class="footer__content container">
             <p class="footer__text">© 2025 Банк НЭФ. Все права защищены.</p>
             <ul class="footer__links">
