@@ -236,3 +236,97 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
     
+//Объявляем переменную headerMenu и сохраняем в нее header__menu
+const headerMenu = document.querySelector('.header__nav');
+// Если такой элемент существует
+if (headerMenu){
+//Объявляем переменную headerList и сохраняем в нее header__list, чтобы мы могли добавить новые элементы
+        const headerList = headerMenu.querySelector('.nav__list');
+
+//Создаем объект menuData, который содержит данные для трех ссылок меню.
+        const menuData = {
+// Каждая ссылка содержит link (адрес ссылки; если ссылка никуда не ведет, то можно оставить #) и title (текст ссылки).
+            link1: {
+                link: 'credits.html',
+                title: 'Кредиты',
+            },
+            link2: {
+                link: 'insurance.html',
+                title: 'Страхование',
+            },
+            link3: {
+                link: 'mortgage.html',
+                title: 'Ипотека',
+            },
+            link4: {
+                link: 'index.html',
+                title: 'Главная',
+            }
+        }
+
+//Создаем функцию createLink, которая будет добавлять ссылку в меню. Внутри функции 2 переменные: UrlLink – адрес, а title — текст ссылки.
+        const createLink = (UrlLink, title) =>{
+// создаем переменную  link, которая будет содержать HTML-код ссылки и вставляем в него 2 переменные
+            const link = `
+            <li class="nav__item"><a href="${UrlLink}" class="nav__link">${title}</a></li>
+            `;
+            return link;
+        }
+
+// Создаем цикл for и проходим по всем элементам объекта menuData.
+        for (const linkItem in menuData) {
+//Получаем данные для ссылки и сохраняем в переменную link.
+            const link = menuData[linkItem];
+//Создаем переменную linkIndex и вызываем функцию createLink, куда передаем адрес и заголовок.
+            const linkIndex = createLink(link.link, link.title);
+// С помощью метода insertAdjacentHTML добавляем созданный HTML-код в конец списка headerList.
+            headerList.insertAdjacentHTML('beforeend', linkIndex);
+
+        }
+}
+
+console.log('Навигацинное меню создано с помощью javascript!');
+
+const cardsContainer = document.querySelector('.header__nav');
+    if (cardsContainer) {
+        const cardList = cardsContainer.querySelector('.nav__list');
+
+        // Пример URL для получения данных с сервера
+        const apiUrl = 'data.json';
+
+        // Функция для создания карточки
+        const createCard = (link, title) => {
+
+            // Шаблонные строки и подстановки
+            const card = `
+                <a class="nav__item" href="${link}">
+                    <h3 class="card__title">${title}</h3>
+                </a>
+            `;
+
+            return card;
+        }
+
+        // Загрузка данных с сервера
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Данные
+                console.log(typeof (data)); // Тип полученных данных
+
+                // for (const item in data) {
+                //     const card = data[item];
+
+                //     const cardElement = createCard(card.link, card.icon, card.iconAlt, card.iconWidth, card.iconHeight, card.title, card.description);
+                //     cardList.insertAdjacentHTML('beforeend', cardElement);
+                // }
+
+                data.forEach(item => {
+                    const cardElement = createCard(item.link, item.icon, item.iconAlt, item.iconWidth, item.iconHeight, item.title, item.description);
+                    cardList.insertAdjacentHTML('beforeend', cardElement);
+                });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+            });
+    }
